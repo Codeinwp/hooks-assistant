@@ -1,0 +1,24 @@
+{
+    "name": "hooks-assistant",
+    "description": "toggle Hooks",
+    "keywords": [
+        "wordpress"
+    ],
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "Stefan Cotitosu",
+            "email": "stefan@themeisle.com",
+            "homepage": "https://themeisle.com"
+        }
+    ],
+    "type": "wordpress-plugin",
+    "require": {
+        "webdevstudios/cmb2": "dev-trunk"
+    },
+    "autoload": {
+        "files": [
+            "vendor/webdevstudios/cmb2/init.php"
+        ]
+    }
+}
