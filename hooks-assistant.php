@@ -24,3 +24,9 @@ License: A "Slug" license name e.g. GPL2
 /**
  * @TODO: class for saving code using options
  */
+
+add_action( 'init', function(){
+	require_once __DIR__ . '/inc/class-hooks-assistant-server.php';
+	$wprb_rest_server = new Hooks_Assistant_Rest_Server();
+	$wprb_rest_server->init();
+});
