@@ -58,3 +58,9 @@ add_action( 'wp_enqueue_scripts', 'hooks_assistant_enqueue_scripts' );
 /**
  * @TODO: class for saving code using options
  */
+
+add_action( 'init', function(){
+	require_once __DIR__ . '/inc/class-hooks-assistant-server.php';
+	$wprb_rest_server = new Hooks_Assistant_Rest_Server();
+	$wprb_rest_server->init();
+});
