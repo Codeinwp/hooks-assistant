@@ -33,11 +33,12 @@ function hooks_assistant_get_hooks( $hook ) {
 	if( isset( $wp_actions[$hook] ) ) {
 		?>
         <div class="ha-element">
-            <div class="ha-toggle"></div>
+            <div class="ha-toggle"><span><?php echo $hook; ?></span></div>
             <div class="ha-editor-wrapper">
                 <div class="ha-editor">
                     <textarea></textarea>
                 </div>
+                <span class="ha-save-btn">Save changes</span>
             </div>
         </div>
 
