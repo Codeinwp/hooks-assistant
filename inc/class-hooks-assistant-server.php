@@ -50,7 +50,7 @@ class Hooks_Assistant_Rest_Server extends WP_Rest_Controller {
 
 	public function set_hook_value( WP_REST_Request $request ){
 
-		if ( ! empty( $request['hook'] ) ) {
+		if ( empty( $request['hook'] ) ) {
 			return rest_ensure_response( 'No hook' );
 		}
 
@@ -62,7 +62,14 @@ class Hooks_Assistant_Rest_Server extends WP_Rest_Controller {
 
 		$value = $request['value'];
 
-		update_option( 'ha_value_for_' . $hook, $value );
+		$result = update_option( 'ha_value_for_' . $hook, $value );
+
+		wp_send_json( $value );
+
+		if ( $result ) {
+			return rest_ensure_response( 'done' );
+		}
+		return rest_ensure_response( 'error' );
 	}
 
 	public function get_options_permission() {
