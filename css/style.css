@@ -1,0 +1,25 @@
+.ha-element {
+    display: inline-block;
+    position: relative;
+}
+
+.ha-toggle {
+    display: inline-block;
+    height: 40px;
+    width: 100px;
+    background-color: #4164b3;
+}
+.ha-toggle:hover {
+    cursor: pointer;
+}
+.ha-editor-wrapper {
+    display: none;
+}
+.ha-editor-wrapper.ha-typing {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    transform: translateY(100%);
+    background-color: #fff;
+}
