@@ -14,10 +14,16 @@ define( 'HOOKS_ASSISTANT_VERSION', '1.0.0' );
 global $ha_render_flag;
 $ha_render_flag = false;
 
+
+
 function hooks_assistant_enable_button( $wp_admin_bar ) {
+    $ha_circle = '<svg height="10" width="10">
+  <circle class="ha-circle" cx="5" cy="5" r="5"></circle>
+</svg>';
+
 	$args = array(
 		'id'    => 'hooks-assistant',
-		'title' => '<i class="fa fa-eye"></i>' . 'Hooks Assistant',
+		'title' => $ha_circle . 'Hooks Assistant',
 		'href'  => '',
 		'meta'  => array(
 		        'class' => 'ha-power',

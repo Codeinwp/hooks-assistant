@@ -49,6 +49,10 @@
     cursor: pointer;
 }
 
-.ha-power {
+.ha-power .ha-circle{
+    fill: red;
+}
 
+.ha-power .ha-circle-enabled {
+    fill: #00ff00;
 }

@@ -14,8 +14,10 @@
         //     $( '.ha-toggle' ).css( 'display', 'none' );
         // });
 
+
         $( '.ha-power' ).on( 'click', function() {
             $( this ).toggleClass( 'ha-power-enable' );
+            $( '.ha-circle' ).toggleClass('ha-circle-enabled');
             $( '.ha-toggle' ).toggleClass( 'ha-toggle-on' );
         } );
 
