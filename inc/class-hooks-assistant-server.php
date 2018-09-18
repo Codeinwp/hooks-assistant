@@ -79,6 +79,4 @@ class Hooks_Assistant_Rest_Server extends WP_Rest_Controller {
 
 		return true;
 	}
-
-
 }

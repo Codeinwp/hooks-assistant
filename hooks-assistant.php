@@ -24,7 +24,6 @@ function hooks_assistant_enable_button( $wp_admin_bar ) {
 	$wp_admin_bar->add_node( $args );
 }
 
-
 /**
  * @TODO add markup for each hook
  */
@@ -46,7 +45,8 @@ function hooks_assistant_render_hooks_editor( $hook ) {
             <div class="ha-toggle"><span><?php echo $hook; ?></span></div>
             <div class="ha-editor-wrapper">
                 <div class="ha-editor">
-                    <textarea><?php $val = get_option('ha_value_for_'.$hook); echo $val ?></textarea>
+                    <textarea><?php $val = get_option( 'ha_value_for_' . $hook );
+						echo $val ?></textarea>
                 </div>
                 <span class="ha-save-btn" data-hook="<?php echo $hook; ?>">Save changes</span>
             </div>
@@ -69,12 +69,12 @@ function hooks_assistant_add_action_effects( $hook ) {
 	global $wp_actions, $ha_render_flag;
 
 	if ( $ha_render_flag && isset( $wp_actions[ $hook ] ) ) {
-       $option = get_option( 'ha_value_for_' . $hook );
+		$option = get_option( 'ha_value_for_' . $hook );
 
 
-       add_action( $hook, function () use ( $option ) {
-           eval( $option );
-       });
+		add_action( $hook, function () use ( $option ) {
+			eval( $option );
+		} );
 	}
 
 }
