@@ -4,6 +4,9 @@
 }
 
 .ha-toggle {
+    display: none;
+}
+.ha-toggle.ha-toggle-on {
     display: inline-block;
     height: 40px;
     width: auto;
@@ -11,7 +14,7 @@
     padding: 5px 10px;
     margin: 5px 5px;
 }
-.ha-toggle:hover {
+.ha-toggle.ha-toggle-on:hover {
     cursor: pointer;
 }
 .ha-toggle span {
@@ -41,4 +44,11 @@
     color: #fff;
     background-color: #4164b3;
     font-weight: 500;
+}
+.ha-save-btn:hover {
+    cursor: pointer;
+}
+
+.ha-power {
+
 }

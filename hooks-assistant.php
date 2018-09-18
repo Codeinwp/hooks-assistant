@@ -17,16 +17,15 @@ $ha_render_flag = false;
 function hooks_assistant_enable_button( $wp_admin_bar ) {
 	$args = array(
 		'id'    => 'hooks-assistant',
-		'title' => 'Hooks Assistant',
-		'href'  => 'http://example.com/',
-		'meta'  => array()
+		'title' => '<i class="fa fa-eye"></i>' . 'Hooks Assistant',
+		'href'  => '',
+		'meta'  => array(
+		        'class' => 'ha-power',
+        )
 	);
 	$wp_admin_bar->add_node( $args );
 }
 
-/**
- * @TODO add markup for each hook
- */
 function hooks_assistant_render_hooks_editor( $hook ) {
 	global $wp_actions, $ha_render_flag;
 
@@ -79,9 +78,6 @@ function hooks_assistant_add_action_effects( $hook ) {
 
 }
 
-/**
- *
- */
 function run_ha_plugin() {
 	if ( ! current_user_can( 'manage_options' ) ) {
 		return;
